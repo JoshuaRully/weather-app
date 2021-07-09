@@ -7,7 +7,13 @@ function App() {
       <header className="App-header">
         Weather App
       </header>
+      <section className="day-list">
       <Day />
+      <Day />
+      <Day />
+      <Day />
+      <Day />
+      </section>
     </div>
   );
 }

@@ -13,9 +13,9 @@ function Day() {
 
   return (
     <div className="weather-tile">
-      <header>
+      <h2>
       {weather.day}
-      </header>
+      </h2>
       <h3>
         {weather.dateTime}
       </h3>
@@ -23,9 +23,9 @@ function Day() {
       <h1>
         {weather.temperature}
       </h1>
-      <footer>
+      <h3>
         {weather.description}
-      </footer>
+      </h3>
     </div>
   )
 }
