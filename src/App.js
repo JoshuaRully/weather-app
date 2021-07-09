@@ -1,4 +1,5 @@
 import './App.css';
+import Day from './components/Day';
 
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       <header className="App-header">
         Weather App
       </header>
+      <Day />
     </div>
   );
 }

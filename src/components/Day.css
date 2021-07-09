@@ -1,0 +1,10 @@
+.weather-tile {
+  display: flex;
+  flex-direction: column;
+  margin: 4vh;
+  padding-top: 2vh;
+  justify-content: center;
+  height: 30vh;
+  width: 30vh;
+  outline-style: dashed;
+}
