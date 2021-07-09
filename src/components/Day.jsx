@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import './Day.css';
 
 const mockWeather = {
@@ -8,23 +8,25 @@ const mockWeather = {
   description: 'cloudy'
 }
 
-function Day() {
-  const [weather, setWeather] = useState(mockWeather)
-
+function Day(props) {
   return (
     <div className="weather-tile">
       <h2>
-      {weather.day}
+      {mockWeather.day}
+      {/* {props.day} */}
       </h2>
       <h3>
-        {weather.dateTime}
+        {mockWeather.dateTime}
+        {/* props.dateTime */}
       </h3>
       <img />
       <h1>
-        {weather.temperature}
+        {mockWeather.temperature}
+        {/* {props.temperature} */}
       </h1>
       <h3>
-        {weather.description}
+        {mockWeather.description}
+        {/* {props.description} */}
       </h3>
     </div>
   )

@@ -1,5 +1,6 @@
 import './App.css';
 import Day from './components/Day';
+import DayList from './components/DayList';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Day />
       <Day />
       <Day />
+      <DayList />
       </section>
     </div>
   );
