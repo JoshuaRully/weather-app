@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import DayList from './components/DayList';
+import Spinner from './components/Spinner';
 
 function App() {
   const [weather, setWeather] = useState({});
@@ -13,7 +14,7 @@ function App() {
       });
   }, []);
 
-  if (weather.list !== undefined) {
+  if (weather.list) {
     return (
       <div className="App">
         <header className="App-header">
@@ -24,7 +25,7 @@ function App() {
       </div>
     );
   } else {
-    return <div>Loading...</div>
+    return <Spinner />
   }
 
 }
