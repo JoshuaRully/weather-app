@@ -1,21 +1,17 @@
 import React from 'react'
 import './Day.css';
 
-const mockWeather = {
-  dateTime: 'July 9th, 12:00pm',
-  temperature: '20C',
-  description: 'cloudy'
-}
-
 function Day(props) {
+  const condition = "http://openweathermap.org/img/wn/"+ props.weather.weather[0].icon +"@2x.png"
+
   return (
     <div className="weather-tile">
       <h2>
         {props.weather.dt_txt}
       </h2>
-      <img alt="weather condition"/>
+      <img id="condition" src={condition} alt="weather condition"/>
       <h1>
-        {props.weather.main.temp}
+        {Math.ceil(props.weather.main.temp - 273.15)}
       </h1>
       <h3>
         {props.weather.weather[0].main}

@@ -3,7 +3,6 @@
   flex-direction: column;
   margin: 4vh;
   padding: 2vh 0 2vh 0;
-  justify-content: space-between;
   height: 30vh;
   width: 30vh;
   background-color: #DEEDF0;
@@ -12,4 +11,10 @@
 
 :hover.weather-tile {
   box-shadow: 10px 10px 5px grey;
+}
+
+#condition {
+  width: 6em;
+  height: 6em;
+  align-self: center;
 }

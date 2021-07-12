@@ -7,7 +7,7 @@ function App() {
   const [weather, setWeather] = useState({});
 
   useEffect(function getWeather() {
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?q=Guelph&cnt=10&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
+    fetch(`http://api.openweathermap.org/data/2.5/forecast?q=Guelph&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
       .then(res => res.json())
       .then(data => {
         setWeather(data);
