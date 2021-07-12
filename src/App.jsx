@@ -13,17 +13,20 @@ function App() {
       });
   }, []);
 
-  
+  if (weather.list !== undefined) {
+    return (
+      <div className="App">
+        <header className="App-header">
+          Weather App
+        </header>
+        {console.log(weather)}
+        <DayList weather={weather}/>
+      </div>
+    );
+  } else {
+    return <div>Loading...</div>
+  }
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        Weather App
-      </header>
-      {console.log(weather)}
-      <DayList />
-    </div>
-  );
 }
 
 export default App;

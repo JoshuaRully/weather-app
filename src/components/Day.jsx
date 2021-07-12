@@ -11,17 +11,14 @@ function Day(props) {
   return (
     <div className="weather-tile">
       <h2>
-        {mockWeather.dateTime}
-        {/* props.dateTime */}
+        {props.weather.dt_txt}
       </h2>
       <img alt="weather condition"/>
       <h1>
-        {mockWeather.temperature}
-        {/* {props.temperature} */}
+        {props.weather.main.temp}
       </h1>
       <h3>
-        {mockWeather.description}
-        {/* {props.description} */}
+        {props.weather.weather[0].main}
       </h3>
     </div>
   )
