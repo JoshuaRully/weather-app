@@ -1,14 +1,10 @@
 import React from 'react';
-import spinner from './spinner.gif';
+import { CircularProgress } from '@material-ui/core';
 
 const Spinner = () => {
   return (
     <div>
-      <img
-        src={spinner}
-        alt="Loading..."
-        style={{ width: '200px', margin: ' 40px auto', display: 'block' }}
-      />
+      <CircularProgress style={{margin: "4vh"}} />
     </div>
   );
 };

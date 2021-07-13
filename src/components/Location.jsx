@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { TextField } from '@material-ui/core';
 
 function Location() {
   const [city, setCity] = useState('');
@@ -14,11 +15,14 @@ function Location() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>
-        City:
-        <input type="text" value={city} onChange={handleChange} />
-      </label>
-      <input type="submit" value="Submit" />
+      <TextField
+        id="standard-basic"
+        label="City"
+        type="text"
+        value={city}
+        onChange={handleChange}
+        style={{margin: "2vh"}}
+      />
     </form>
   )
 }
