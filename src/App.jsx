@@ -3,19 +3,19 @@ import axios from 'axios';
 
 import './App.css';
 import DayList from './components/DayList';
-import Spinner from './components/Spinner';
 import SearchBar from './components/SearchBar';
 
-function App(props) {
+function App() {
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState({});
 
   useEffect(() => {
     axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
-      .then(data => {
-        setWeather(data);
-        console.log(data);
-      });
+      .then(res => {
+        setWeather(res.data);
+        console.log(res.data);
+      })
+      .catch(error => console.error);
   }, [city]);
 
   return (

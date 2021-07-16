@@ -1,13 +1,16 @@
 import React from 'react'
+import { DateTime } from 'luxon';
+
 import './Day.css';
 
 function Day(props) {
   const condition = "http://openweathermap.org/img/wn/"+ props.weather.weather[0].icon +"@2x.png"
 
+  let date = DateTime.fromSQL(props.weather.dt_txt).toFormat("ff");
   return (
     <div className="weather-tile">
       <h2>
-        {props.weather.dt_txt}
+        {date}
       </h2>
       <img id="condition" src={condition} alt="weather condition"/>
       <h1>
