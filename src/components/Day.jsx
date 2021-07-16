@@ -11,7 +11,7 @@ function Day(props) {
       </h2>
       <img id="condition" src={condition} alt="weather condition"/>
       <h1>
-        {Math.ceil(props.weather.main.temp - 273.15)}
+        {Math.ceil(props.weather.main.temp - 273.15)}°C
       </h1>
       <h3>
         {props.weather.weather[0].main}
