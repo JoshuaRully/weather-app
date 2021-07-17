@@ -13,9 +13,9 @@ function App() {
     axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
       .then(res => {
         setWeather(res.data);
-        console.log(res.data);
+        // console.log(res.data);
       })
-      .catch(error => console.error);
+      .catch(error => console.error(error));
   }, [city]);
 
   return (

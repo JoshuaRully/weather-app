@@ -14,10 +14,9 @@ export default function SearchBar(props) {
   }, [term, onSearch]);
 
   return (
-    <section className="search">
-      <form className="search__form" onSubmit={event => event.preventDefault()}>
+    <section>
+      <form onSubmit={event => event.preventDefault()}>
         <TextField
-          className="radius"
           spellCheck="false"
           placeholder="Search City"
           name="search"
