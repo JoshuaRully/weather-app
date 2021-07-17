@@ -4,6 +4,7 @@ import axios from 'axios';
 import './App.css';
 import DayList from './components/DayList';
 import SearchBar from './components/SearchBar';
+import Location from './components/Location';
 
 function App() {
   const [city, setCity] = useState('');
@@ -24,7 +25,8 @@ function App() {
         Weather App
       </header>
       <SearchBar onSearch={city => setCity(city)} />
-      <DayList weather={weather}/>
+      <Location weather={weather} />
+      <DayList weather={weather} />
     </div>
   );
 }
