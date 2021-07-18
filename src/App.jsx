@@ -11,7 +11,7 @@ function App() {
   const [weather, setWeather] = useState({});
 
   useEffect(() => {
-    axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=7f55beff6e0ebb2222439307be3428b0`)
+    axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=7f55beff6e0ebb2222439307be3428b0`)
       .then(res => {
         setWeather(res.data);
         // console.log(res.data);
