@@ -9,16 +9,16 @@ function Day(props) {
   
   return (
     <div className="weather-tile">
-      <h2>
+      <p>
         {date}
-      </h2>
+      </p>
       <img id="condition" src={condition} alt="weather condition"/>
-      <h1>
+      <p>
         {Math.ceil(props.weather.main.temp - 273.15)}°C
-      </h1>
-      <h3>
+      </p>
+      <p>
         {props.weather.weather[0].main}
-      </h3>
+      </p>
     </div>
   )
 }

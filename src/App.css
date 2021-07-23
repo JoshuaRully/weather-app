@@ -20,7 +20,7 @@
   justify-content: space-evenly;
 }
 
-@media only screen and (max-width: 1006px) {
+@media only screen and (max-width: 1024px) {
   .day-list {
     flex-direction: column;
     align-items: center;
